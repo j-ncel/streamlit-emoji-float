@@ -1,2 +1,1 @@
-recursive-include my_component/frontend/build *
-include pyproject.toml
+recursive-include streamlit_emoji_float/frontend/build *
