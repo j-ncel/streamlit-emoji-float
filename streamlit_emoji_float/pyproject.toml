@@ -1,6 +1,6 @@
 [project]
 name = "streamlit-emoji-float"
-version = "0.0.1"
+version = "0.1.0"
 
 [[tool.streamlit.component.components]]
 name = "emoji-float"

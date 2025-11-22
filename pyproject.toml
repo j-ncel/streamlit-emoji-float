@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "streamlit-emoji-float"
-version = "0.0.1"
+version = "0.1.0"
 description = "Streamlit component that animates emojis, making them float on your Streamlit app."
 readme = "README.md"
 license = "MIT"
@@ -12,6 +12,11 @@ license-files = ["LICENSE"]
 requires-python = ">=3.10"
 authors = [{ name = "Juncel Datinggaling"}]
 dependencies = ["streamlit >= 1.51"]
+keywords = ["streamlit", "emoji", "animation", "component"]
+[project.urls]
+Homepage = "https://github.com/j-ncel/streamlit-emoji-float"
+Repository = "https://github.com/j-ncel/streamlit-emoji-float"
+Issues = "https://github.com/j-ncel/streamlit-emoji-float/issues"
 
 [project.optional-dependencies]
 devel = [
