@@ -7,12 +7,21 @@ out = st.components.v2.component(
 )
 
 
-def emoji_float(emojis=["⭐", "😊", "🎈"], count=10, key=None):
-    component_value = out(
-        key=key,
+def emoji_float(
+        emojis=["⭐", "😊", "🎈"],
+        count=50,
+        minSize=50,
+        maxSize=100,
+        animationLength=3,
+        key=None):
+
+    out(key=key,
         data={
             "emojis": emojis,
             "count": count,
+            "minSize": minSize,
+            "maxSize": maxSize,
+            "animationLength": animationLength,
         },
-    )
-    return component_value
+        )
+    return emojis
