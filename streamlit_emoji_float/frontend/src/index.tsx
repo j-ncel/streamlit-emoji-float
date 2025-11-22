@@ -20,11 +20,17 @@ const EmojiFloatRoot: Component<any, any> = (args) => {
     reactRoots.set(parentElement, reactRoot);
   }
 
-  const { emojis, count } = data;
+  const { emojis, count, minSize, maxSize, animationLength } = data;
 
   reactRoot.render(
     <StrictMode>
-      <EmojiFloat emojis={emojis} count={count} />
+      <EmojiFloat
+        emojis={emojis}
+        count={count}
+        minSize={minSize}
+        maxSize={maxSize}
+        animationLength={animationLength}
+      />
     </StrictMode>,
   );
 
