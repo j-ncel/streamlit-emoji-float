@@ -1,57 +1,40 @@
-# streamlit-custom-component
+# streamlit-emoji-float
 
-Streamlit component that allows you to do X
+`streamlit-emoji-float` is a fun custom Streamlit component that animates emojis, making them float on your Streamlit app.
 
-## Installation instructions
+![Demo GIF](sample/emoji-float-sample.gif)
 
-```sh
-uv pip install streamlit-custom-component
+## Installation
+
+```bash
+pip install streamlit-emoji-float
 ```
 
-### Development install (editable)
-
-When developing this component locally, install it in editable mode so Streamlit picks up code changes without rebuilding a wheel. Run this from the directory that contains `pyproject.toml`:
-
-```sh
-uv pip install -e . --force-reinstall
-```
-
-## Usage instructions
+## Usage
 
 ```python
-import streamlit as st
+from streamlit_emoji_float import emoji_float
 
-from my_component import my_component
+# Usage with default emojis
+emoji_float()
 
-value = my_component()
-
-st.write(value)
+# Usage with custom parameters
+emoji_float(
+    emojis=["🔥", "🚀", "🎉"],
+    count=20,
+    minSize=50,
+    maxSize=100,
+    animationLength=5
+)
 ```
 
-## Build a wheel
+`emojis:` List of emoji characters to animate (default: ["⭐", "😊", "🎈"])  
+`count:` Number of emojis to spawn (default: 50)  
+`minSize:` Minimum size in pixels (default: 50)  
+`maxSize:` Maximum size in pixels (default: 100)  
+`animationLength:` Duration of floating animation (default: 3)  
+`key:` Streamlit component key for uniqueness
 
-To package this component for distribution:
-
-1. Build the frontend assets (from `my_component/frontend`):
-
-   ```sh
-   npm i
-   npm run build
-   ```
-
-2. Build the Python wheel using UV (from the project root):
-   ```sh
-   uv build
-   ```
-
-This will create a `dist/` directory containing your wheel. The wheel includes the compiled frontend from `my_component/frontend/build`.
-
-### Requirements
-
-- Python >= 3.10
-- Node.js >= 24 (LTS)
-
-### Expected output
-
-- `dist/streamlit_custom_component-0.0.1-py3-none-any.whl`
-- If you run `uv run --with build python -m build` (without `--wheel`), you’ll also get an sdist: `dist/streamlit-custom-component-0.0.1.tar.gz`
+<a href="https://coff.ee/jncel">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="100" height="" alt="Buy Me a Coffee">
+</a>
