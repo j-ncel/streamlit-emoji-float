@@ -1,10 +1,17 @@
 import streamlit as st
 
-out = st.components.v2.component(
-    "streamlit-emoji-float.emoji-float",
-    js="index-*.js",
-    html='<div class="react-root"></div>',
-)
+_out = None
+
+
+def _get_out():
+    global _out
+    if _out is None:
+        _out = st.components.v2.component(
+            "streamlit-emoji-float.emoji-float",
+            js="index-*.js",
+            html='<div class="react-root"></div>',
+        )
+    return _out
 
 
 def emoji_float(
@@ -37,6 +44,7 @@ def emoji_float(
     list[str]
         The list of emojis used.
     """
+    out = _get_out()
     out(key=key,
         data={
             "emojis": emojis,
