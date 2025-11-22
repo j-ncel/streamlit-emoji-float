@@ -1,38 +1,26 @@
-import { FC, ReactElement, useMemo } from "react";
+import { FC, ReactElement, useEffect } from "react";
+import { floatEmoji } from "./floatEmoji";
 
 export type EmojiFloatProps = {
-  emojis?: Array<string>;
+  emojis?: string[];
   count?: number;
+  minSize?: number;
+  maxSize?: number;
+  animationLength?: number;
 };
 
 const EmojiFloat: FC<EmojiFloatProps> = ({
-  emojis = ["⭐", "😊", "🎈"],
-  count = 10,
+  emojis = ["🎈", "⭐", "😊"],
+  count = 24,
+  minSize = 50,
+  maxSize = 100,
+  animationLength = 5,
 }): ReactElement => {
-  const randomEmojis = useMemo(
-    () =>
-      Array.from(
-        { length: count },
-        () => emojis[Math.floor(Math.random() * emojis.length)],
-      ),
-    [count, emojis],
-  );
+  useEffect(() => {
+    floatEmoji([{ emojis, count, minSize, maxSize, animationLength }]);
+  }, [emojis, count, minSize, maxSize, animationLength]);
 
-  return (
-    <div>
-      {randomEmojis.map((emoji, i) => (
-        <span
-          key={i}
-          style={{
-            display: "inline-block",
-            margin: "0 4px",
-          }}
-        >
-          {emoji}
-        </span>
-      ))}
-    </div>
-  );
+  return <div />;
 };
 
 export default EmojiFloat;
