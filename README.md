@@ -9,7 +9,7 @@
 
 ---
 
-![Demo GIF](https://github.com/j-ncel/streamlit-emoji-float/blob/main/sample/emoji-float-sample-update.gif?raw=true)
+![Demo GIF](https://github.com/j-ncel/streamlit-emoji-float/blob/main/sample/emoji-float-sample.gif?raw=true)
 
 ## Installation
 
