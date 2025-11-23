@@ -7,7 +7,7 @@ def _get_out():
     global _out
     if _out is None:
         _out = st.components.v2.component(
-            "streamlit-emoji-float.emoji-float",
+            "streamlit-emoji-float.streamlit_emoji_float",
             js="index-*.js",
             html='<div class="react-root"></div>',
         )
@@ -20,7 +20,7 @@ def emoji_float(
         minSize: int = 50,
         maxSize: int = 100,
         animationLength: int = 3,
-        key=None):
+        key=None) -> list[str]:
     """
     Display floating emojis in a Streamlit app.
 
