@@ -2,9 +2,11 @@
 
 `streamlit-emoji-float` is a fun custom Streamlit component that animates emojis, making them float on your Streamlit app.
 
-<a href="https://emoji-float-demo.streamlit.app/" style="text-decoration:none;">
-    <h3 style="display:inline; margin-left:4px;">Try the live demo on Streamlit Cloud</h3>
-</a>
+<h3 style="display:inline; margin-left:4px;">
+  <a href="https://emoji-float-demo.streamlit.app/" style="text-decoration:none;">
+      Try the live demo on Streamlit Cloud
+  </a>
+</h3>
 
 ---
 
