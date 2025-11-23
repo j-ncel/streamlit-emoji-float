@@ -1,1 +1,2 @@
 recursive-include streamlit_emoji_float/frontend/build *
+include streamlit_emoji_float/pyproject.toml

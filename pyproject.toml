@@ -35,4 +35,4 @@ include = ["streamlit_emoji_float*"]
 include-package-data = true
 
 [tool.setuptools.package-data]
-streamlit_emoji_float = ["frontend/build/**/*"]
+my_component = ["frontend/build/**/*", "pyproject.toml"]

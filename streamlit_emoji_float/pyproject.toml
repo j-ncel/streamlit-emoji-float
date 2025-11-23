@@ -3,5 +3,5 @@ name = "streamlit-emoji-float"
 version = "0.1.0"
 
 [[tool.streamlit.component.components]]
-name = "emoji-float"
+name = "streamlit_emoji_float"
 asset_dir = "frontend/build"
